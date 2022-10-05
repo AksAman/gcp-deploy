@@ -1,4 +1,4 @@
-FROM golang:1.19 as builder
+FROM golang:1.19-alpine as builder
 
 # Create and change to the app directory.
 WORKDIR /app
@@ -33,7 +33,7 @@ RUN CGO_ENABLED=0 go build -mod=readonly -v -o gogcp
 
 # Use the Google Distroless image for a minimal container.
 FROM gcr.io/distroless/static
-# Copy the binary to the production image from the builder stage.
+# # Copy the binary to the production image from the builder stage.
 COPY --from=builder /app/cmd/webserver/gogcp /
 
 # Run the web service on container startup.
