@@ -29,15 +29,16 @@ steps:
     args:
       - functions
       - deploy
-      - gogcp
+      - gogcp-all
       - --trigger-http
       - --runtime
       - go119
-      - --source=$PWD/cmd/webserver
+      - --source
+      - "handlers/"
       - --entry-point
       - GetAllUsers
       - --project
       - $PROJECT_ID
       - --memory
-      - 2048
+      - "2048"
     dir: "$_GIT_REPO_NAME"
