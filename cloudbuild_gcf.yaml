@@ -27,18 +27,17 @@ steps:
 
   - name: "gcr.io/cloud-builders/gcloud"
     args:
-      [
-        "functions",
-        "deploy",
-        "gogcp",
-        "--trigger-http",
-        "--runtime",
-        "go119",
-        "--entry-point",
-        "cmd.server.GetAllUsers",
-        "--project",
-        "$PROJECT_ID",
-        "--memory",
-        "2048",
-      ]
+      - functions
+      - deploy
+      - gogcp
+      - --trigger-http
+      - --runtime
+      - go119
+      - --source=$PWD/cmd/webserver
+      - --entry-point
+      - GetAllUsers
+      - --project
+      - $PROJECT_ID
+      - --memory
+      - 2048
     dir: "$_GIT_REPO_NAME"
