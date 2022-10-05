@@ -1,5 +1,5 @@
 REGION=us-central1
-PROJECT_NAME=gogcp
+PROJECT_NAME=gogcp-python
 
 gcloud run services delete $PROJECT_NAME --region $REGION --platform managed # --quiet
 
