@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TAG=gogcp-nodistroless-alpine
+TAG=fastapi-example
 docker rm $(docker ps -a --filter ancestor=$TAG -q)
 # docker build -t gogcp --no-cache Dockerfile
 docker build -t $TAG --no-cache -f ./Dockerfile .
