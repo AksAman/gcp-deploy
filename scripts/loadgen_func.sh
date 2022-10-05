@@ -6,4 +6,4 @@ echo $CF_TRIGGER_URL
 
 # curl -s $CF_TRIGGER_URL
 
-hey -n 100 -c 10 $CF_TRIGGER_URL
+hey -n 10000 -c 1000 $CF_TRIGGER_URL

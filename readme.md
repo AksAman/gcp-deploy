@@ -22,6 +22,50 @@ A simple exercise learning
     - Cloud Function
 
       ```bash
+      https://{URL}/gogcp-python-all
+
+      Summary:
+        Total:	8.3976 secs
+        Slowest:	5.9882 secs
+        Fastest:	0.2443 secs
+        Average:	0.6163 secs
+        Requests/sec:	1190.8224
+        
+        Total data:	1130000 bytes
+        Size/request:	113 bytes
+
+      Response time histogram:
+        0.244 [1]	|
+        0.819 [8110]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+        1.393 [1072]	|■■■■■
+        1.968 [563]	|■■■
+        2.542 [163]	|■
+        3.116 [50]	|
+        3.691 [26]	|
+        4.265 [5]	|
+        4.839 [7]	|
+        5.414 [1]	|
+        5.988 [2]	|
+
+
+      Latency distribution:
+        10% in 0.3264 secs
+        25% in 0.3677 secs
+        50% in 0.3985 secs
+        75% in 0.7059 secs
+        90% in 1.2403 secs
+        95% in 1.7280 secs
+        99% in 2.4841 secs
+
+      Details (average, fastest, slowest):
+        DNS+dialup:	0.0257 secs, 0.2443 secs, 5.9882 secs
+        DNS-lookup:	0.0147 secs, 0.0000 secs, 0.2852 secs
+        req write:	0.0001 secs, 0.0000 secs, 0.0103 secs
+        resp wait:	0.4508 secs, 0.2442 secs, 4.3617 secs
+        resp read:	0.0001 secs, 0.0000 secs, 0.0052 secs
+
+      Status code distribution:
+        [200]	10000 responses
       ```
 
     - Cloud Run
