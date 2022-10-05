@@ -35,7 +35,7 @@ steps:
         "--runtime",
         "go119",
         "--entry-point",
-        "GetAllUsers",
+        "cmd.server.GetAllUsers",
         "--project",
         "$PROJECT_ID",
         "--memory",
