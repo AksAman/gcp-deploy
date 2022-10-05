@@ -34,9 +34,7 @@ RUN go build -mod=readonly -v -o gogcp
 # Use the Google Distroless image for a minimal container.
 FROM gcr.io/distroless/static
 # Copy the binary to the production image from the builder stage.
-COPY --from=builder /app/cmd/webserver/gogcp /gogcp
+COPY --from=builder /app/cmd/webserver/gogcp /
 
-# # # Run the web service on container startup.
-# # CMD ["/app/lshelper/lshelper"]
-# # # ENTRYPOINT ["./gogcp"]
+# Run the web service on container startup.
 CMD ["/gogcp"]

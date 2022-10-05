@@ -22,30 +22,30 @@ steps:
       # The gcloud command used to call this cloud build uses the --no-source switch which ensures the source builds correctly. As a result we need to
       # clone the specified source to preform the build.
       args:
-          [
-              "clone",
-              "--single-branch",
-              "--branch",
-              "${_GIT_SOURCE_BRANCH}",
-              "${_GIT_SOURCE_URL}",
-          ]
-
-    - name: "gcr.io/cloud-builders/gcloud"
-      args: ["builds", "submit", "--tag", "gcr.io/$PROJECT_ID/gogcp"]
-      dir: "DIY-Tools/gogcp"
+          - clone
+          - --single-branch
+          - --branch
+          - ${_GIT_SOURCE_BRANCH}
+          - ${_GIT_SOURCE_URL}
 
     - name: "gcr.io/cloud-builders/gcloud"
       args:
-          [
-              "run",
-              "deploy",
-              "gogcp",
-              "--image",
-              "gcr.io/$PROJECT_ID/gogcp",
-              "--platform",
-              "managed",
-              "--region",
-              "us-central1",
-              "--allow-unauthenticated",
-          ]
-      dir: "DIY-Tools/gogcp"
+          - builds
+          - submit
+          - --tag
+          - gcr.io/$PROJECT_ID/gogcp
+      dir: "$_GIT_REPO_NAME"
+
+    - name: "gcr.io/cloud-builders/gcloud"
+      args:
+          - run
+          - deploy
+          - gogcp
+          - --image
+          - gcr.io/$PROJECT_ID/gogcp
+          - --platform
+          - managed
+          - --region
+          - us-central1
+          - --allow-unauthenticated
+      dir: "$_GIT_REPO_NAME"
