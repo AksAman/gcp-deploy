@@ -3,6 +3,7 @@ A simple exercise learning
   - [x] How to deploy a simple `golang` webapp using
     - [x] Google Cloud Run
     - [x] Google Cloud Functions
+    - [ ] Google App Engine
   - [x] How to use the Google Cloud SDK
   - [x] How to use the Google Cloud CLI
   - [x] Comparison of the two services wrt load test
