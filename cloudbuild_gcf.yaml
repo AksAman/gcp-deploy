@@ -40,5 +40,5 @@ steps:
       - --project
       - $PROJECT_ID
       - --memory
-      - "2048"
+      - "256"
     dir: "$_GIT_REPO_NAME"
