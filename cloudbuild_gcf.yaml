@@ -29,14 +29,14 @@ steps:
     args:
       - functions
       - deploy
-      - gogcp-all
+      - gogcp-python-all
       - --trigger-http
       - --runtime
-      - go119
+      - python39
       # - --source
       # - "handlers/"
       - --entry-point
-      - FuncGetAllUsers
+      - getAllUsers
       - --project
       - $PROJECT_ID
       - --memory

@@ -1,5 +1,5 @@
 REGION=us-central1
-FUNCTION_NAME=gogcp-all
+FUNCTION_NAME=gogcp-python-all
 export CF_TRIGGER_URL=$(gcloud functions describe $FUNCTION_NAME --format="value(httpsTrigger.url)")
 
 echo $CF_TRIGGER_URL

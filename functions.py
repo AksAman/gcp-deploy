@@ -5,5 +5,5 @@ def getAllUsers():
     return get_all_users()
 
 
-if __name__ == "__main__":
-    print(getAllUsers())
+# if __name__ == "__main__":
+#     print(getAllUsers())
