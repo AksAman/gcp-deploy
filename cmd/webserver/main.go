@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"sort"
 	"strconv"
 
 	"github.com/gophercises/gogcp/utils"
@@ -37,6 +38,10 @@ func GetAllUsers(w http.ResponseWriter, r *http.Request) {
 	for _, user := range users {
 		usersList = append(usersList, user)
 	}
+	// sort by id
+	sort.Slice(usersList, func(i, j int) bool {
+		return usersList[i].ID < usersList[j].ID
+	})
 	json.NewEncoder(w).Encode(usersList)
 }
 
@@ -91,8 +96,6 @@ func loggerMW(next http.Handler) http.Handler {
 func main() {
 	router := mux.NewRouter()
 	router.Use(loggerMW)
-
-	panic("testerror")
 
 	apiRoute := router.PathPrefix("/api").Subrouter()
 
