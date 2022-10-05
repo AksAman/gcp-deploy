@@ -92,6 +92,8 @@ func main() {
 	router := mux.NewRouter()
 	router.Use(loggerMW)
 
+	panic("testerror")
+
 	apiRoute := router.PathPrefix("/api").Subrouter()
 
 	apiRoute.Use(func(next http.Handler) http.Handler {
