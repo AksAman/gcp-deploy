@@ -6,4 +6,6 @@ FUNCTION_NAME=gogcp-all
 CF_TRIGGER_URL="https://us-central1-learninggcp-364602.cloudfunctions.net/gogcp-all"
 echo $CF_TRIGGER_URL
 
-curl -s $CF_TRIGGER_URL/api/users
+# curl -s $CF_TRIGGER_URL
+
+hey -n 10000 -c 1000 $CF_TRIGGER_URL
