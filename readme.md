@@ -1,21 +1,17 @@
-## Image Comparisons
+# Run vs Fun
+A simple exercise learning
+  - [x] How to deploy a simple `golang` webapp using
+    - [x] Google Cloud Run
+    - [x] Google Cloud Functions
+  - [x] How to use the Google Cloud SDK
+  - [x] How to use the Google Cloud CLI
+  - [x] Comparison of the two services wrt load test
+  - [x] Comparison of different docker base images
 
-### Size
----
-|  Config       | No Alpine | Alpine   |
-|---------------|-----------|----------|
-| No Distroless |  1.01GB   |381.13MB  |
-| Distroless    |  9.47MB   | 9.47MB   |
----
-
-### Works with `CGO_ENABLED=1`
-|  Config       | No Alpine | Alpine   |
-|---------------|-----------|----------|
-| No Distroless |  YES      |    YES   |
-| Distroless    |   NO      |    NO    |
 
 
 # Loadtest results
+![Loadtest results](loadtests/RunVsFun.png)
 
 ## Cloud Function
 
@@ -116,3 +112,22 @@ Details (average, fastest, slowest):
 Status code distribution:
   [200] 10000 responses
 ```
+
+---
+## Image Comparisons
+
+### Size?
+|  Config       | No Alpine | Alpine   |
+|---------------|-----------|----------|
+| No Distroless |  1.01GB   |381.13MB  |
+| Distroless    |  9.47MB   | 9.47MB   |
+
+<br>
+
+### Works with `CGO_ENABLED=1`?
+
+|  Config       | No Alpine | Alpine   |
+|---------------|-----------|----------|
+| No Distroless |  YES      |    YES   |
+| Distroless    |   NO      |    NO    |
+
