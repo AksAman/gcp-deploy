@@ -33,10 +33,10 @@ steps:
       - --trigger-http
       - --runtime
       - go119
-      - --source
-      - "handlers/"
+      # - --source
+      # - "handlers/"
       - --entry-point
-      - GetAllUsers
+      - FuncGetAllUsers
       - --project
       - $PROJECT_ID
       - --memory
