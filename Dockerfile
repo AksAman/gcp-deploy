@@ -29,7 +29,7 @@ WORKDIR /app/cmd/webserver
 # -mod=readonly switch is used to force failure of the build if the go.mod file needs changes to succeed.
 # see https://golang.org/cmd/go/#hdr-Preliminary_module_support for more details.
 # RUN GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -mod=readonly -v -o gogcp 
-RUN go build -mod=readonly -v -o gogcp 
+RUN CGO_ENABLED=0 go build -mod=readonly -v -o gogcp 
 
 # Use the Google Distroless image for a minimal container.
 FROM gcr.io/distroless/static
