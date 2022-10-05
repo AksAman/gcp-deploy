@@ -23,7 +23,7 @@ type User struct {
 }
 
 var users map[int]User = map[int]User{
-	1: {ID: 1, Name: "John", Age: 20},
+	1: {ID: 1, Name: "Doe", Age: 20},
 	2: {ID: 2, Name: "Mike", Age: 30},
 	3: {ID: 3, Name: "Bob", Age: 40},
 }
@@ -89,7 +89,6 @@ func loggerMW(next http.Handler) http.Handler {
 }
 
 func main() {
-
 	router := mux.NewRouter()
 	router.Use(loggerMW)
 
