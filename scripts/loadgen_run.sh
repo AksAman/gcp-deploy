@@ -1,5 +1,5 @@
-# REGION=us-central1
-# PROJECT_NAME=gogcp
+REGION=us-central1
+PROJECT_NAME=gogcp-python
 export CLOUD_RUN_SERVICE_URL=$(gcloud run services describe $PROJECT_NAME --region $REGION --format 'value(status.url)')
 echo $CLOUD_RUN_SERVICE_URL
 

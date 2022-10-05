@@ -33,7 +33,7 @@ steps:
       - builds
       - submit
       - --tag
-      - gcr.io/$PROJECT_ID/gogcp
+      - gcr.io/$PROJECT_ID/gogcp-python
     dir: "$_GIT_REPO_NAME"
 
   - name: "gcr.io/cloud-builders/gcloud"
@@ -42,7 +42,7 @@ steps:
       - deploy
       - gogcp-python
       - --image
-      - gcr.io/$PROJECT_ID/gogcp
+      - gcr.io/$PROJECT_ID/gogcp-python
       - --platform
       - managed
       - --region
