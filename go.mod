@@ -1,4 +1,4 @@
-module github.com/gophercises/gogcp
+module github.com/AksAman/gogcp
 
 go 1.19
 

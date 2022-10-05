@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gophercises/gogcp/handlers"
-	"github.com/gophercises/gogcp/utils"
+	"github.com/AksAman/gogcp/handlers"
+	"github.com/AksAman/gogcp/utils"
 	"github.com/gorilla/mux"
 )
 
