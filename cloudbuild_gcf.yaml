@@ -41,4 +41,6 @@ steps:
       - $PROJECT_ID
       - --memory
       - "256"
+      - --region
+      - $REGION
     dir: "$_GIT_REPO_NAME"
