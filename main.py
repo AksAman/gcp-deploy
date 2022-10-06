@@ -2,13 +2,13 @@ import logging
 
 import functions_framework
 
-# from google.cloud import logging as cloudlogging
+from google.cloud import logging as cloudlogging
 
 from app.models import UserList
 from app.router import get_all_users
 
-# lg_client = cloudlogging.Client()
-# lg_client.setup_logging(log_level=logging.INFO)
+lg_client = cloudlogging.Client()
+lg_client.setup_logging(log_level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 headers = {
