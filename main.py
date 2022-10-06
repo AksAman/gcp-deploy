@@ -1,9 +1,11 @@
-import logging
 from app.router import get_all_users
 from app.models import UserList
+from google.cloud import logging as cloudlogging
+import logging
 
+lg_client = cloudlogging.Client()
+lg_client.setup_logging(log_level=logging.INFO)
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
 
 headers = {
     "Content-Type": "application/json",
@@ -11,8 +13,10 @@ headers = {
 
 
 def getAllUsers(request):
-    logger.info(f"{type(request)=}")
-    logger.info(f"{dir(request)=}")
+    logger.info(f"CUSTOM LOG: {type(request)=}")
+    logger.info(f"CUSTOM LOG: {dir(request)=}")
+    print(f"CUSTOM PRINT: {type(request)=}")
+    print(f"CUSTOM PRINT: {dir(request)=}")
     users = get_all_users()
     return (UserList(__root__=users).to_json(), 200, headers)
 
