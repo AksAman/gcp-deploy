@@ -10,7 +10,7 @@ from app.router import get_all_users
 def getAllUsers(request):
     users = get_all_users()
     return Response(
-        response=UserList(users).json(),
+        response=UserList(__root__=users).json(),
         status=200,
         content_type="application/json",
     )
