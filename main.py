@@ -3,7 +3,7 @@ from app.router import get_all_users
 from app.models import UserList
 
 logger = logging.getLogger(__name__)
-
+logger.setLevel(logging.DEBUG)
 
 headers = {
     "Content-Type": "application/json",
