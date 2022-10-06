@@ -11,9 +11,9 @@ router = APIRouter(
 )
 
 users: Dict[int, User] = {
-    1: User(id=1, name="John", age=20),
-    2: User(id=2, name="Mike", age=30),
-    3: User(id=3, name="Bob", age=40),
+    1: User(id=1, name="John 1", age=20),
+    2: User(id=2, name="Mike 2", age=30),
+    3: User(id=3, name="Bob 3", age=40),
 }
 
 
