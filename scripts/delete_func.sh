@@ -1,6 +1,10 @@
 PROJECT_ID=$(gcloud config get-value project)
-REGION=us-central1
 FUNCTION_NAME=gogcp-python-all
 
 # delete cloud run
-gcloud functions delete $FUNCTION_NAME --region $REGION # --quiet
+REGION=us-central1
+gcloud functions delete $FUNCTION_NAME --region $REGION --quiet
+
+
+REGION=asia-south1
+gcloud functions delete $FUNCTION_NAME --region $REGION --quiet
